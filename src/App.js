@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function App() {
     return (
@@ -6,4 +6,4 @@ export default function App() {
             <h1>My React App</h1>
         </div>
     )
-}
+};
