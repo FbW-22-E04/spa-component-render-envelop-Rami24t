@@ -5,22 +5,23 @@ function Envelope(props) {
     return (
         <div className="container">
             <header>
-                <div className="sender">
-                    <p>{props.fromPerson.name}</p>
-                    <p>{props.fromPerson.add1}</p>
-                    <p>{props.fromPerson.add2}</p>
-                </div>
+                <AddressLabel person={props.fromPerson} />
                 <div className="imgDiv">
                     <img src={props.stamp} alt="" />
                 </div>
             </header>
-            <div className="receiver">
-                <p>{props.toPerson.name}</p>
-                <p>{props.toPerson.add1}</p>
-                <p>{props.toPerson.add2}</p>
-            </div>
+            <AddressLabel person={props.toPerson} />
         </div>
     );
+}
+
+function AddressLabel(props) {
+    return (
+        <div>
+            <p>{props.person.name}</p>
+            <p>{props.person.add1}</p>
+            <p>{props.person.add2}</p>
+        </div>);
 }
 
 export default Envelope;
